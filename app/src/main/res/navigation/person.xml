@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/person"
+    app:startDestination="@id/personFragment2">
+
+    <fragment
+        android:id="@+id/personFragment2"
+        android:name="com.m3chladon.earthquakeanalyst.ui.fragment.person.PersonFragment"
+        android:label="@string/person" />
+</navigation>

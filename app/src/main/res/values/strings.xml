@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Deprem Analisti</string>
+
+
+    <string name="navigation_drawer_open" translatable="false">Navigation drawer opened</string>
+    <string name="navigation_drawer_close" translatable="false">Navigation drawer closed</string>
+
+    <string name="network_error">"Network Error"</string>
+
+    <string name="map">"Harita"</string>
+    <string name="home">"Home"</string>
+    <string name="person">"Kişiler"</string>
+
+    <!-- Home Fragment -->
+    <string name="dashboard_title">"Dashboard"</string>
+    <string name="general_title">Genel</string>
+    <string name="total_earthquake_number">"Son Depremler:"</string>
+    <string name="total_hazardous_number">Tehlikeli Depremler:</string>
+    <string name="person_number">Kayıtlı Kişi Sayısı:</string>
+
+    <!-- Earthquake Fragment -->
+    <string name="mag">"Büyüklük"</string>
+    <string name="place_depth">"Yer &amp; Derinlik"</string>
+    <string name="date_time">"Zaman"</string>
+    <string name="title_activity_maps">Map</string>
+
+    <!-- Event Details Fragment -->
+    <string name="lbl_depth">Derinlik</string>
+    <string name="date">Tarih</string>
+    <string name="hour">Zaman</string>
+    <string name="latitude">Enlem</string>
+    <string name="longitude">Boylam</string>
+    <string name="attitude">Yükseklik</string>
+
+</resources>

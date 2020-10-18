@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/map"
+        android:title="@string/map"
+        android:icon="@drawable/ic_map_24dp" />
+
+    <item android:id="@+id/home"
+        android:title="@string/home"
+        android:icon="@drawable/ic_home_24dp" />
+
+    <item android:id="@+id/person"
+        android:title="@string/person"
+        android:icon="@drawable/ic_person_24dp"/>
+Person
+
+    <!--<item android:id="@+id/action_settings"
+        android:title="Person"
+        android:icon="@drawable/ic_person_24dp" /> -->
+
+</menu>

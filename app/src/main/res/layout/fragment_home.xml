@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+                name="viewModel"
+                type="com.m3chladon.earthquakeanalyst.vm.HomeFragmentViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/dashboard_title"
+                android:textSize="@dimen/first_level_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/cv_first_level"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                        android:id="@+id/circularProgressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:progress="@{viewModel.progEarth}"
+                        app:cpb_background_progressbar_color="#b6bbd8"
+                        app:cpb_background_progressbar_width="5dp"
+                        app:cpb_progress_direction="to_right"
+                        app:cpb_progress_max="500"
+                        app:cpb_progressbar_color="#3f51b5"
+                        app:cpb_progressbar_width="15dp"
+                        app:cpb_round_border="false"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_result_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{viewModel.resultText}"
+                        android:textSize="50sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/circularProgressBar"
+                        app:layout_constraintEnd_toEndOf="@+id/circularProgressBar"
+                        app:layout_constraintStart_toStartOf="@+id/circularProgressBar"
+                        app:layout_constraintTop_toTopOf="@+id/circularProgressBar"
+                        tools:text="200" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_general"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/general_title"
+                android:textSize="@dimen/first_level_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cv_first_level" />
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_general">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/second_level_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/appCompatTextView2"
+                        style="@style/DashBoardInfoStyle"
+                        android:text="@string/total_earthquake_number"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/second_level_layout" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/num_earthquake"
+                        style="@style/DashBoardInfoStyleValue"
+                        android:text="@{viewModel.numEarthquake}"
+                        app:layout_constraintBottom_toBottomOf="@+id/appCompatTextView2"
+                        app:layout_constraintStart_toEndOf="@+id/appCompatTextView2"
+                        app:layout_constraintTop_toTopOf="@+id/appCompatTextView2" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/appCompatTextView3"
+                        style="@style/DashBoardInfoStyle"
+                        android:text="@string/total_hazardous_number"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/appCompatTextView2" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/num_hazard_earthquake"
+                        style="@style/DashBoardInfoStyleValue"
+                        android:text="@{viewModel.numHazardous}"
+                        app:layout_constraintBottom_toBottomOf="@+id/appCompatTextView3"
+                        app:layout_constraintStart_toEndOf="@+id/appCompatTextView3"
+                        app:layout_constraintTop_toTopOf="@+id/appCompatTextView3" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/appCompatTextView4"
+                        style="@style/DashBoardInfoStyle"
+                        android:text="@string/person_number"
+                        android:textColor="@color/Black"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/appCompatTextView3" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/num_person"
+                        style="@style/DashBoardInfoStyleValue"
+                        android:text="@{viewModel.numPerson}"
+                        app:layout_constraintBottom_toBottomOf="@+id/appCompatTextView4"
+                        app:layout_constraintStart_toEndOf="@+id/appCompatTextView4"
+                        app:layout_constraintTop_toTopOf="@+id/appCompatTextView4" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <com.m3chladon.earthquakeanalyst.component.RoundedButton
+                android:id="@+id/rounded_button"
+                style="@style/RoundedButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="16dp"
+                android:text="Tüm Depremler"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="Tüm Depremer" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

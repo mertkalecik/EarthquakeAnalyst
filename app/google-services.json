@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "388830226839",
+    "firebase_url": "https://earthquakeanalyst.firebaseio.com",
+    "project_id": "earthquakeanalyst",
+    "storage_bucket": "earthquakeanalyst.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:388830226839:android:9b22e2b5fd8c6a0c25fcd2",
+        "android_client_info": {
+          "package_name": "com.m3chladon.earthquakeanalyst"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "388830226839-js3e052b5ib27jg0r45m5qdij2mqc7k1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWfkbfJp5mtZpIvSyCEa9LjLLFOeP0Pbc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "388830226839-js3e052b5ib27jg0r45m5qdij2mqc7k1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

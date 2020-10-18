@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/home"
+        app:startDestination="@id/homeFragment">
+
+    <fragment
+            android:id="@+id/homeFragment"
+            android:name="com.m3chladon.earthquakeanalyst.ui.fragment.HomeFragment"
+            android:label=" ">
+        <action
+                android:id="@+id/action_homeFragment_to_earthquakeFragment"
+                app:destination="@+id/earthquakeFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+
+    <fragment
+            android:id="@+id/earthquakeFragment"
+            android:name="com.m3chladon.earthquakeanalyst.ui.fragment.earthquake.EarthquakeFragment"
+            android:label="Depremler"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left">
+        <action
+                android:id="@+id/action_earthquakeFragment_to_eventDetailsFragment"
+                app:destination="@id/eventDetailsFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+
+    <fragment
+            android:id="@+id/eventDetailsFragment"
+            android:name="com.m3chladon.earthquakeanalyst.ui.fragment.eventdetails.EventDetailsFragment"
+            android:label="Detaylar"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left">
+        <action
+                android:id="@+id/action_eventDetailsFragment_to_singleMapFragment"
+                app:destination="@+id/singleMapFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+
+    <fragment
+            android:id="@+id/singleMapFragment"
+            android:name="com.m3chladon.earthquakeanalyst.ui.fragment.singlemap.SingleMapFragment"
+            android:label="Harita"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+
+
+</navigation>

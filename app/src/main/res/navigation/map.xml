@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/map"
+    app:startDestination="@id/mapFragment">
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.m3chladon.earthquakeanalyst.ui.fragment.MapFragment"
+        android:label="@string/map"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left">
+
+        <action android:id="@+id/action_mapFragment_to_eventDetailsFragment"
+            app:destination="@id/eventDetailsFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/eventDetailsFragment"
+        android:name="com.m3chladon.earthquakeanalyst.ui.fragment.eventdetails.EventDetailsFragment"
+        android:label="Detaylar"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left">
+        <action
+                android:id="@+id/action_eventDetailsFragment_to_singleMapFragment"
+                app:destination="@+id/singleMapFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+
+    <fragment
+            android:id="@+id/singleMapFragment"
+            android:name="com.m3chladon.earthquakeanalyst.ui.fragment.singlemap.SingleMapFragment"
+            android:label="Harita"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+
+</navigation>
