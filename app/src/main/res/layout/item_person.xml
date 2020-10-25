@@ -9,7 +9,7 @@
             android:layout_height="wrap_content">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/swipe_item"
+                android:id="@+id/swipe_a"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="5dp"

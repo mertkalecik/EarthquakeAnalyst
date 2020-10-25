@@ -73,10 +73,10 @@ class MapFragment : BaseFragment<MapFragmentViewModel, FragmentMapBinding>(
             }
 
             list?.forEach { event ->
-                val lat = event.latitude ?: "0.0"
-                val long = event.longitude ?: "0.0"
-                val place = event.place ?: ""
-                val mag = event.mag ?: ""
+                val lat = event.Latitude ?: "0.0"
+                val long = event.Longitude ?: "0.0"
+                val place = event.Place ?: ""
+                val mag = event.Mag ?: ""
 
                 val latLng = LatLng(lat.toDouble(), long.toDouble())
 

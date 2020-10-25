@@ -50,18 +50,18 @@ class PersonAdapter(
             binding.run {
                 swipeManager.bindView(swipeLayout, adapterPosition)
                 swipeLayout.isRightSwipeEnabled = true
-                swipeItem.setOnClickListener {
+                swipeA.setOnClickListener {
                     swipeManager.closeAllItems()
                     clickListener.invoke(data)
                 }
                 mainContent.setOnClickListener {
                     swipeManager.closeAllItems()
                 }
-                tvName.text = data.name
-                tvSurname.text = data.surname
-                tvPlace.text = data.place
-                tvRelation.text = data.relation
-                ivPerson.setDrawable(data.gender)
+                tvName.text = data.Name
+                tvSurname.text = data.Surname
+                tvPlace.text = data.Place
+                tvRelation.text = data.Relation
+                ivPerson.setDrawable(data.Gender)
             }
         }
     }

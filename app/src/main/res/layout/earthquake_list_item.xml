@@ -24,7 +24,7 @@
                 app:layout_constraintGuide_percent="0.95" />
 
         <TextView
-                android:id="@+id/tv_icon"
+                android:id="@+id/tv_con"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
                 android:layout_marginTop="16dp"
@@ -49,8 +49,8 @@
                 android:textColor="@android:color/black"
                 android:textSize="14sp"
                 android:textStyle="normal"
-                app:layout_constraintStart_toEndOf="@+id/tv_icon"
-                app:layout_constraintTop_toTopOf="@id/tv_icon"
+                app:layout_constraintStart_toEndOf="@+id/tv_con"
+                app:layout_constraintTop_toTopOf="@id/tv_con"
                 app:layout_constraintEnd_toStartOf="@id/tv_date"
                 tools:text="Manisa" />
 

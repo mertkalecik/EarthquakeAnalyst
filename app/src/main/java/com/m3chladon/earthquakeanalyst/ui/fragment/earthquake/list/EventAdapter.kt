@@ -45,12 +45,12 @@ class EventAdapter(
             }
             val felt = "${data.felt} $depthPostFix"
             binding.run {
-                tvIcon.text = data.mag
+                tvCon.text = data.mag
                 tvPlace.text = data.place
                 tvFelt.text = felt
                 tvDate.text = data.date
                 tvTime.text = data.time
-                tvIcon.setBackground(data.iconRes)
+                tvCon.setBackground(data.iconRes)
             }
         }
     }

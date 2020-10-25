@@ -41,7 +41,7 @@ abstract class BaseActivity<VM: BaseViewModel, DB: ViewDataBinding>(val viewMode
         super.onCreate(savedInstanceState)
 
         intent.extras?.let {
-            readBundle(intent.extras)
+            readBundle(it)
         }
 
         configureViewModel(vm)

@@ -11,14 +11,14 @@ fun List<Event>.toEventListEntity() = mutableListOf<EventListItem>().apply {
 }
 
 fun Event.toEventListItem() = EventListItem(
-    place = place,
-    date = date,
-    time = hour,
-    mag = mag,
-    felt = depth,
-    latitude = latitude,
-    longitute = longitude,
-    iconRes = getDrawable(mag?.toDouble())
+    place = Place,
+    date = Date,
+    time = Hour,
+    mag = Mag,
+    felt = Depth,
+    latitude = Latitude,
+    longitute = Longitude,
+    iconRes = getDrawable(Mag?.toDouble())
 )
 
 fun getDrawable(mag: Double?): Int? {
